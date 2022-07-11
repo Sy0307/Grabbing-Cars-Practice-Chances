@@ -135,14 +135,15 @@ if __name__ == '__main__':
 
     to_who = "学车"
     text1 = "预约4-5点"
-    text2 = "另外可预约5-6点"
+    text2 = "如已经预约,则预约5-6点\n如以上时间均占满则预约10-11点\n"
     text3 = "如有需要调整时间请私信找我调换，谢谢"
-    text4 = "Supported by \n jiangminghui2003@gmail.com"
+    text4 = "脚本已开源\n 戳https://github.com/Jimihuazzz/Grabbing-Cars-Practice-Chances"
     text5 = "时区校准判定 \n 戳https://data.iana.org/time-zones/tz-link.html"
     
     for i in range(0,20):
         the_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         wechat.send_msg("学车1", text1+"\n"+text2+"\n"+the_time+"\n"+text3+"\n"+text4+"\n"+text5)
+    #    wechat.send_msg("学车1",datetime.datetime.now().__str__())
     # for contact in [to_who]:
     #     wechat.send_file(contact, file_path)
 
